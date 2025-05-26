@@ -9,7 +9,7 @@ USE PJR_Agha_Dustin_R;
 -- -----------------------------------------------------
 -- Table: user
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE IF NOT EXISTS users (
     user_id INT PRIMARY KEY,
     id_card VARCHAR(50),
     username VARCHAR(50),
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS user (
     created_at DATETIME
 );
 
-INSERT INTO user (user_id, id_card, username, password, role, jenis_pengguna, nama_lengkap, created_at) VALUES
+INSERT INTO users (user_id, id_card, username, password, role, jenis_pengguna, nama_lengkap, created_at) VALUES
 (1, 'ADM001', 'admin', '0190203a7bbd73250516f069df18b500', 'admin', 'Admin', 'Administrator Sistem', '2025-05-23 08:33:00'),
 (2, '12345678', 'siswa1', '3afa0d81296a4f17d47dec823261b1ec', 'user', 'Siswa', 'Ahmad Rizki', '2025-05-23 08:33:00'),
 (3, '87654321', 'siswa2', 'f3aca4a61956bcedf28d382f40dfeac9', 'user', 'Siswa', 'Siti Nurhaliza', '2025-05-23 08:33:00'),
@@ -55,7 +55,7 @@ INSERT INTO ruangan (ruangan_id, nama_ruangan, lokasi, kapasitas, status, is_ena
 -- -----------------------------------------------------
 -- Table: peminjaman
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS peminjaman (
+CREATE TABLE IF NOT EXISTS peminjaman_ruangan (
     peminjaman_id INT PRIMARY KEY,
     user_id INT,
     ruangan_id INT,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS peminjaman (
     return_approved_by INT
 );
 
-INSERT INTO peminjaman (
+INSERT INTO peminjaman_ruangan (
   peminjaman_id, user_id, ruangan_id, tanggal_pinjam, waktu_mulai, durasi_pinjam, waktu_selesai,
   status, keperluan, keterangan, created_at, updated_at, is_enabled,
   kondisi_ruangan, catatan_pengembalian, return_requested_at, return_approved_at, return_approved_by
