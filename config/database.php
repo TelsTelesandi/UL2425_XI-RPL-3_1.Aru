@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'peminjaman_ruangan');
+define('DB_NAME', 'PJR_Agha_Dustin_R');
 
 // Koneksi ke database
 try {
