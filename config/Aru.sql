@@ -1,10 +1,10 @@
 
 -- -----------------------------------------------------
--- Database: PJR_Agha_Dustin_R
+-- Database: PJR_Aru
 -- -----------------------------------------------------
 
-CREATE DATABASE IF NOT EXISTS PJR_Agha_Dustin_R;
-USE PJR_Agha_Dustin_R;
+CREATE DATABASE IF NOT EXISTS PJR_ARU;
+USE PJR_Aru;
 
 -- -----------------------------------------------------
 -- Table: user
